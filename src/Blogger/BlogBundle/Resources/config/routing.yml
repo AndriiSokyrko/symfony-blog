@@ -10,8 +10,8 @@ BloggerBlogBundle_about:
     requirements:
     methods:  GET
 BloggerBlogBundle_contact:
-    path:   /about
+    path:   /contact
     defaults: { _controller: "BloggerBlogBundle:Page:contact" }
     requirements:
-    methods:  GET
+    methods:  GET|POST
 
