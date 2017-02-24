@@ -97,7 +97,20 @@
      *
      * @return Blog
      */
-    public function setTitle($title)
+    public function setComments($comments)
+    {
+        $this->comments = $comments;
+
+        return $this;
+    }
+
+		public function getComments()
+		{
+			return $this->comments;
+		}
+
+
+		public function setTitle($title)
     {
         $this->title = $title;
 

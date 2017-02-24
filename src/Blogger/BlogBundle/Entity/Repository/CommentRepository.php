@@ -39,4 +39,17 @@
 				'message' => 'You must enter a comment'
 			)));
 		}
+
+		public function getLatestComments($limit = 10)
+		{
+			$qb = $this->createQueryBuilder('c')
+			           ->select('c')
+			           ->addOrderBy('c.id', 'DESC');
+
+			if (false === is_null($limit))
+				$qb->setMaxResults($limit);
+
+			return $qb->getQuery()
+			          ->getResult();
+		}
 	}
