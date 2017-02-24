@@ -11,7 +11,7 @@ class BlogController extends Controller
     {
         return $this->render('', array('name' => $name));
     }
-    public function showAction($id)
+    public function showAction($id, $slug)
     {
         $em = $this->getDoctrine()->getManager();
 
